@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework1/kakao_t/kakao_main_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: KakaoMainScreen(),
     );
   }
 }
