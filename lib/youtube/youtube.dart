@@ -4,8 +4,7 @@ import 'package:homework1/kakao_t/kakao_main_screen.dart';
 class Youtube extends StatelessWidget {
   Youtube({Key? key}) : super(key: key);
 
-final items = [한석봉, 홍길동];
-
+final items = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,10 +19,7 @@ final items = [한석봉, 홍길동];
                 MaterialPageRoute(builder: (context) => KakaoMainScreen()),
               );
             },
-            child: Column(
-              children: [
-                Text('${item[index]}', style: TextStyle(fontSize: 200),)
-              ],
+            child:
             )
           )
           return Text('${items[index]}, style: TextStyle(fontSize: 100),);

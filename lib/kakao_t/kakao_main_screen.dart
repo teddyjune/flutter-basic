@@ -44,7 +44,7 @@ class _KakaoMainScreenState extends State<KakaoMainScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.account_box),
-              label: '이용 서비스',
+              label: '회원정보',
             ),
           ]
       ),
