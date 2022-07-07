@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:homework1/kakao_t/kakao_main_screen.dart';
+import 'package:homework1/listview/components/listview_item.dart';
 
 class ListviewMain extends StatelessWidget {
   ListviewMain({Key? key}) : super(key: key);
@@ -15,13 +17,12 @@ class ListviewMain extends StatelessWidget {
             return GestureDetector(
               onTap: () {
                 print('${items[index]}');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => KakaoMainScreen()),
+                );
               },
-              child: Column(
-                children: [
-                  Text('${items[index]}', style: TextStyle(fontSize: 100)),
-                  Divider(),
-                ],
-              ),
+              child: ListviewItem(items[index]),
             );
           }),
     );

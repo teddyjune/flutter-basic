@@ -9,16 +9,10 @@ class ListviewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(
-          'assets/store.jpg',
-          width: 100,
-          height: 100,
-          fit: BoxFit.cover,
-        ),
-        Text(
-          name,
-          style: TextStyle(fontSize: 20),
-        ),
+        Image.asset('assets/playlist1.png',
+          width: 100, height: 100,),
+        Text(name, style: TextStyle(fontSize: 50)),
+        Divider(),
       ],
     );
   }
