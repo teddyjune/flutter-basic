@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:homework1/kakao_t/kakao_main_screen.dart';
-import 'package:homework1/youtube/components/youtube_item.dart';
 
-class Youtube extends StatelessWidget {
-  Youtube({Key? key}) : super(key: key);
+
+class ListView extends StatelessWidget {
+  ListView({Key? key}) : super(key: key);
 
 final items = ['홍길동', '한석봉'];
 
@@ -22,7 +22,7 @@ final items = ['홍길동', '한석봉'];
                 MaterialPageRoute(builder: (context) => KakaoMainScreen()),
               );
             },
-            child: YoutubeItem(items[index]),
+            child: ListViewItem(items[index]),
           );
     };
 }}
