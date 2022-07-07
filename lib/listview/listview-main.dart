@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:homework1/kakao_t/kakao_main_screen.dart';
+import 'package:homework1/listview/components/listview_item.dart';
 
+import '../kakao_t/kakao_main_screen.dart';
 
-class ListView extends StatelessWidget {
-  ListView({Key? key}) : super(key: key);
+class LIstviewMain extends StatelessWidget {
+  LIstviewMain({Key? key}) : super(key: key);
 
-final items = ['홍길동', '한석봉'];
+  final items = ['홍길동', '한석봉'];
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +14,19 @@ final items = ['홍길동', '한석봉'];
       body: ListView.builder(
         padding: const EdgeInsets.all(8),
         itemCount: items.length,
-        itemBuilder: (BuildContext context, int index){
+        itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
-            onTap: (){
+            onTap: () {
               print('${items[index]}');
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => KakaoMainScreen()),
               );
             },
-            child: ListViewItem(items[index]),
+            child: ListviewItem(items[index]),
           );
-    };
-}}
+        },
+      ),
+    );
+  }
+}
