@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:homework1/kakao_t/kakao_main_screen.dart';
+import 'package:homework1/youtube/components/youtube_item.dart';
 
 class Youtube extends StatelessWidget {
   Youtube({Key? key}) : super(key: key);
 
-final items = [];
+final items = ['홍길동', '한석봉'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-        itemCount: 3,
-        itemBuilder: (BuildCountext context, int index){
+        padding: const EdgeInsets.all(8),
+        itemCount: items.length,
+        itemBuilder: (BuildContext context, int index){
           return GestureDetector(
             onTap: (){
-              print('${item[index]}');
+              print('${items[index]}');
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => KakaoMainScreen()),
               );
             },
-            child:
-            )
-          )
-          return Text('${items[index]}, style: TextStyle(fontSize: 100),);
-        },
-      ),
-
-    );
-  }
-}
+            child: YoutubeItem(items[index]),
+          );
+    };
+}}
